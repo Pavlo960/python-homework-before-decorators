@@ -12,4 +12,14 @@ def make_bank_account(starting_balance):
     account(50) -> "Balance: $150"
     account(20) -> "Balance: $170"
     """
-    pass  # видали цей рядок і напиши свій код
+    
+    def deposit(amount):
+        nonlocal starting_balance
+        starting_balance += amount
+        return f"Balance: ${starting_balance}"
+    
+    return (deposit)
+
+account = make_bank_account(100)
+account(50)
+account(20)
