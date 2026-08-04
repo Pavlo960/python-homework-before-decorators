@@ -7,4 +7,10 @@ def cart_total(*prices):
     cart_total(10, 20, 5) -> "Total: $35"
     cart_total() -> "Total: $0"
     """
-    pass  # видали цей рядок і напиши свій код
+    total = sum(prices)
+    return f"Total: ${total}"
+
+print(cart_total(10, 20, 5))
+print(cart_total())
+
+
