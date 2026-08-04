@@ -7,4 +7,13 @@ def count_words(sentence):
     Приклад:
     count_words("cat dog cat bird dog cat") -> {"cat": 3, "dog": 2, "bird": 1}
     """
-    pass  # видали цей рядок і напиши свій код
+    counts = {}
+    result = sentence.split()
+    for word in result:
+        if word in counts:
+            counts[word] += 1
+        else: counts[word] = 1
+    return counts
+
+print(count_words("cat dog cat bird dog cat"))
+            
