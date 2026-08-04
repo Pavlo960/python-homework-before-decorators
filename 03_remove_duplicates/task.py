@@ -7,4 +7,7 @@ def remove_duplicates(items):
     remove_duplicates([1, 2, 2, 3, 1]) -> [1, 2, 3]
     remove_duplicates(["a", "b", "a"]) -> ["a", "b"]
     """
-    pass  # видали цей рядок і напиши свій код
+    return list(dict.fromkeys(items))
+
+print(remove_duplicates([1, 2, 2, 3, 1]))
+print(remove_duplicates(["a", "b", "a"]))
