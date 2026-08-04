@@ -8,4 +8,8 @@ def normalize_username(username):
     normalize_username("  Oleh  ") -> "oleh"
     normalize_username("MARIA") -> "maria"
     """
-    pass  # видали цей рядок і напиши свій код
+    result = username.strip().lower()
+    return result
+
+print(normalize_username("  Oleh  "))
+print(normalize_username("MARIA"))
