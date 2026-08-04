@@ -7,4 +7,17 @@ def parse_receipt(lines):
     Приклад:
     parse_receipt(["apple:10", "bread:5", "apple:10"]) -> {"apple": 20, "bread": 5}
     """
-    pass  # видали цей рядок і напиши свій код
+    result_dict = {}
+    
+    for line in lines:
+
+        item, price = line.split(":")
+        price = int(price)
+
+        if item in result_dict:
+            result_dict[item] += price
+        else: result_dict[item] = price
+
+    return result_dict
+
+parse_receipt(["apple:10", "bread:5", "apple:10"])
